@@ -4,18 +4,21 @@ import javax.swing.JOptionPane;
 
 public class Vtv {
 
-	String motor, frenos, suspension;
+	String motor, frenos, suspension,auto;
 
 	int matricula;
 	
 	
 	
-	public void Modelo() {
+	public  Vtv() {
+		
+		this.matricula=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la matricula"));
+		this.auto=JOptionPane.showInputDialog("Ingrese el modelo del auto");
 		
 	}
 	
 	
-	public Vtv() {
+	public void Verificar() {
 
 		this.motor = JOptionPane.showInputDialog("Funciona el motor?");
 		this.frenos = JOptionPane.showInputDialog("Funcionan los frenos?");
@@ -38,16 +41,14 @@ public class Vtv {
 			JOptionPane.showMessageDialog(null, "El motor y los frenos no funcionan, la VTV esta desaprobada!");
 		} else if (motor.equalsIgnoreCase("no") && frenos.equalsIgnoreCase("si") && suspension.equalsIgnoreCase("no")) {
 			JOptionPane.showMessageDialog(null, "El motor y la suspension no funcionan, la VTV esta desaprobada!");
-		} else {
-
-		}
+		} 
 
 	}
 
 	@Override
 	public String toString() {
-		return "Vtv [motor=" + motor + ", frenos=" + frenos + ", suspension=" + suspension + ", matricula=" + matricula
-				+ "]";
+		return "Vtv [motor=" + motor + ", frenos=" + frenos + ", suspension=" + suspension + ", auto=" + auto
+				+ ", matricula=" + matricula + "]";
 	}
 
 }
