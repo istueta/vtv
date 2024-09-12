@@ -8,9 +8,9 @@ public class main {
 		
 		
 		
-		Vtv auto1= new Vtv("si","si","no");
+		Vtv auto1= new Vtv();
 		
-		String op;
+		
 		JOptionPane.showMessageDialog(null, auto1);
 	}
 
